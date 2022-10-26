@@ -1,7 +1,6 @@
 import './App.css';
 import { Greet, Person, PersonList, Status, Heading, Oscar, Button, Input, Container } from "./components"
-import LoggedIn from './components/state/LoggedIn';
-import User from './components/state/User';
+import { Counter, LoggedIn, User } from './components/state'
 
 function App() {
   const personName = {
@@ -40,9 +39,10 @@ function App() {
       {/* handleChange() as parameter from Input component */}
       {/* <Input value='' handleChange={(event) => console.log(event)} /> */}
       {/* <Container styles={{ border: '1px solid red', padding: '1rem' }} /> */}
-      <LoggedIn />
+      {/* <LoggedIn /> */}
       <br />
-      <User />
+      {/* <User /> */}
+      <Counter />
     </div>
 
   )
