@@ -1,7 +1,7 @@
 import './App.css';
 import { Greet, Person, PersonList, Status, Heading, Oscar, Button, Input, Container } from "./components"
-import { Counter, LoggedIn, User } from './components/state'
-import { Box, ThemeContextProvider } from './components/context';
+// import { Counter, LoggedIn, User } from './components/state'
+import { Box, ThemeContextProvider, User, UserContextProvider } from './components/context';
 
 function App() {
   const personName = {
@@ -44,9 +44,14 @@ function App() {
       <br />
       {/* <User /> */}
       {/* <Counter /> */}
-      <ThemeContextProvider>  {/* ThemeContextProvider is optional */}
+      {/* ThemeContextProvider is optional */}
+      {/* <ThemeContextProvider>  
         <Box />
-      </ThemeContextProvider>
+    </ThemeContextProvider> */}
+
+      <UserContextProvider>
+        <User />
+      </UserContextProvider>
     </div>
 
   )
