@@ -14,7 +14,6 @@ type UserContextProviderProps = {
     children: React.ReactNode
 }
 
-
 // export const UserContext = createContext<UserContextType | null>(null);
 export const UserContext = createContext({} as UserContextType); // this will not need to check if null for userContext in User.tsx component
 
