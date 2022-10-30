@@ -5,6 +5,9 @@ import { Greet, Person, PersonList, Status, Heading, Oscar, Button, Input, Conta
 import { Counter, LoggedIn, User } from './components/state'
 import { Box, ThemeContextProvider, User, UserContextProvider } from './components/context';
 import { DomRef, MutableRef } from './components/ref'
+import { Private } from './components/auth/Private';
+import Profile from './components/auth/Profile';
+import Counter from './components/class/Counter';
 
 function App() {
   const personName = {
@@ -47,15 +50,17 @@ function App() {
       <br />
       <User />
       <Counter />
-      {/* ThemeContextProvider is optional */}
+      // ThemeContextProvider is optional
       <ThemeContextProvider>  
         <Box />
-    </ThemeContextProvider>
+      </ThemeContextProvider>
       <UserContextProvider>
         <User />
       </UserContextProvider>
       <DomRef />
       <MutableRef />
+      <Counter message='The count value is : ' />
+      <Private isLoggedIn={true} component={Profile} />
     </div>
   )
 }
